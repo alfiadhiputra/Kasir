@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+</IfModule>
+
+Options All -Indexes
+ErrorDocument 404 http://localhost/kasir/404
+ErrorDocument 403 http://localhost/kasir/index
+ErrorDocument 402 http://localhost/kasir/index
+ErrorDocument 500 http://localhost/kasir/index
+ErrorDocument 501 http://localhost/kasir/index
+ErrorDocument 502 http://localhost/kasir/index
+ErrorDocument 503 http://localhost/kasir/index
+
